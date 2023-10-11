@@ -207,6 +207,7 @@ function generateCompliment() {
         document.getElementById("compliment").textContent = "You've already used your compliment today!";
       }
     }
+    else document.getElementById("compliment").textContent = "It's not 8am yet babe, I'm still waking up!"
   }
   
   // Function to check if a compliment has been shown today
