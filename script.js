@@ -223,7 +223,20 @@ const compliments = [
   "Our taste in music is different but you've never played a bad song.",
   "I love that you show me new songs",
   "I love your silky pajamas that I rub up and around when we sleep together",
-  "Your positive attitude is noticed by others and very much admired"  
+  "Your positive attitude is noticed by others and very much admired",
+  "Your stubborness is one of your best features",
+  "Our anniversary in San Diego was magic and you even put up with me with my sunburned body",
+  "Living with you is a dream I cannot wait to start",
+  "I that you enjoy all types of food and don't dislike anything for the most part. Even though I am a cheese hater you complete me",
+  "Seeing you wake up early and walk the dog is awesome because it shows how much you care about your animals",
+  "I love that any animal we come accross likes you and wants to cuddle you, even my cats at home",
+  "You and bear are my two favorite things and seeing you two be friends is the best",
+  "Every photo you think you look bad I want to scream a 1000 times that you are the most beautiful creature alive",
+  "You thinking you can beat me in basketball and hurting your ankle for 2 weeks makes me chuckle",
+  "Theres not a trip I want to take without you right by my side",
+  "I still hope you like me when you aren't on birth control hehe",
+  "We compliment each other better than most people I know",
+  "You are the light of my life"  
 ];
 
 const uniqueCompliments = [...new Set(...compliments)];
