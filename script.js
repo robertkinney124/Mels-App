@@ -236,43 +236,15 @@ const compliments = [
   "Theres not a trip I want to take without you right by my side",
   "I still hope you like me when you aren't on birth control hehe",
   "We compliment each other better than most people I know",
-  "You are the light of my life"  ,
-  ""
+  "You are the light of my life"
 ];
 
-const uniqueCompliments = [...new Set(...compliments)];
 
 
-function generateCompliment() {
-    // // Get the current date and time in UTC
-    // const currentDate = new Date();
-    
-    // // Adjust for Pacific Standard Time (PST) which is UTC - 8 hours
-    // const pstOffset = -8 * 60 * 60 * 1000;
-    // currentDate.setTime(currentDate.getTime() + pstOffset);
-    
-    // // Check if it's 8 am PST or later and if the compliment has not been shown today
-    // if (currentDate.getUTCHours() >= 8) {
-    //   // Check if the user has already been shown a compliment today
-    //   if (!hasComplimentBeenShownToday()) {
-    //     // Show a compliment
-    //     const randomIndex = Math.floor(Math.random() * uniqueCompliments.length);
-    //     const compliment = uniqueCompliments[randomIndex];
-    //     document.getElementById("compliment").textContent = compliment;
-        
-    //     // Set a cookie to mark that a compliment has been shown today
-    //     setComplimentShownCookie();
-    //   }
-    //   else {
-    //     document.getElementById("compliment").textContent = "You've already used your compliment today!";
-    //     refreshElement("",2000);
-    //     refreshElement(compliment,1000);
-    //   }
-    // }
-    // else document.getElementById("compliment").textContent = "It's not 8am yet babe, I'm still waking up!"
-        const randomIndex = Math.floor(Math.random() * compliments.length);
-        const compliment = compliments[randomIndex];
-        document.getElementById("compliment").textContent = compliment;
+  function generateCompliment() {
+    const randomIndex = Math.floor(Math.random() * compliments.length);
+    const compliment = compliments[randomIndex];
+    document.getElementById("compliment").textContent = compliment;
   }
   
   // Function to add delay to an element and refresh the text
