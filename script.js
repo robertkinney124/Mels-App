@@ -270,8 +270,8 @@ function generateCompliment() {
     //   }
     // }
     // else document.getElementById("compliment").textContent = "It's not 8am yet babe, I'm still waking up!"
-        const randomIndex = Math.floor(Math.random() * uniqueCompliments.length);
-        const compliment = uniqueCompliments[randomIndex];
+        const randomIndex = Math.floor(Math.random() * compliments.length);
+        const compliment = compliments[randomIndex];
         document.getElementById("compliment").textContent = compliment;
   }
   
