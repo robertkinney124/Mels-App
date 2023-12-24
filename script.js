@@ -282,4 +282,4 @@ const compliments = [
   }
   
   // Call generateCompliment when the page loads
-  window.onload = generateCompliment;
+  //window.onload = generateCompliment;
