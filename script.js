@@ -261,18 +261,18 @@ function generateCompliment() {
 
   
 
-// function checkTimeAndGenerate() {
-//   const now = new Date();
-//   const pacificTime = now.toLocaleString("en-US", { timeZone: "America/Los_Angeles" });
+function checkTimeAndGenerate() {
+  const now = new Date();
+  const pacificTime = now.toLocaleString("en-US", { timeZone: "America/Los_Angeles" });
 
-//   // Check if it's 7 am Pacific Time
-//   if (now.getHours() === 7 && now.getMinutes() === 0) {
-//     clickCount = 0;
-//     generateCompliment();
-//   }
-// }
+  // Check if it's 7 am Pacific Time
+  if (now.getHours() === 7 && now.getMinutes() === 0) {
+    clickCount = 0;
+    document.getElementById("compliment").textContent = "";
+  }
+}
 
-//   // Call the function every minute to check if it's 8 am
-// setInterval(checkTimeAndGenerate, 60000);
+  // Call the function every minute to check if it's 8 am
+setInterval(checkTimeAndGenerate, 60000);
   
   
