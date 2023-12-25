@@ -239,47 +239,40 @@ const compliments = [
   "You are the light of my life"
 ];
 
+let clickCount = 0;
 
+function generateCompliment() {
+    // Check if the button has been clicked more than once
+    if (clickCount === 0) {
+        const randomIndex = Math.floor(Math.random() * compliments.length);
+        const compliment = compliments[randomIndex];
+        document.getElementById("compliment").textContent = compliment;
 
-  function generateCompliment() {
-    const randomIndex = Math.floor(Math.random() * compliments.length);
-    const compliment = compliments[randomIndex];
-    document.getElementById("compliment").textContent = compliment;
-  }
-  
-  // Function to add delay to an element and refresh the text
-  function refreshElement(text, delay){
-    setTimeout(function(){
-      document.getElementById("compliment").textContent = text;
-    },delay);
-  }
-  // Function to check if a compliment has been shown today
-  function hasComplimentBeenShownToday() {
-    const currentDate = new Date();
-    const todayDate = currentDate.toISOString().split("T")[0]; // Get the date portion
-    const complimentShownDate = getComplimentShownDateCookie();
-  
-    return todayDate === complimentShownDate;
-  }
-  
-  // Function to set a cookie to mark that a compliment has been shown today
-  function setComplimentShownCookie() {
-    const currentDate = new Date();
-    const todayDate = currentDate.toISOString().split("T")[0]; // Get the date portion
-    document.cookie = `complimentShown=${todayDate}; expires=Sun, 31 Dec 9999 23:59:59 GMT; path=/`;
-  }
-  
-  // Function to get the date from the complimentShown cookie
-  function getComplimentShownDateCookie() {
-    const cookies = document.cookie.split("; ");
-    for (const cookie of cookies) {
-      const [name, value] = cookie.split("=");
-      if (name === "complimentShown") {
-        return value;
-      }
+        // Increment the click count
+        clickCount++;
+
     }
-    return null;
-  }
+    else{
+        document.getElementById("compliment").textContent = "Sorry babe, you've used your compliment for the day!";
+        document.getElementById("generate-button").disabled = true;
+    }
+}
+
+
   
-  // Call generateCompliment when the page loads
-  //window.onload = generateCompliment;
+
+// function checkTimeAndGenerate() {
+//   const now = new Date();
+//   const pacificTime = now.toLocaleString("en-US", { timeZone: "America/Los_Angeles" });
+
+//   // Check if it's 7 am Pacific Time
+//   if (now.getHours() === 7 && now.getMinutes() === 0) {
+//     clickCount = 0;
+//     generateCompliment();
+//   }
+// }
+
+//   // Call the function every minute to check if it's 8 am
+// setInterval(checkTimeAndGenerate, 60000);
+  
+  
